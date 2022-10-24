@@ -1,0 +1,12 @@
+.summary-card svg path {
+    transition: all .5s ease-in-out;
+}
+.summary-card p {
+    transition: all .5s ease-in-out;
+}
+.summary-card:hover svg path {
+    fill: white;
+}
+.summary-card:hover p {
+    color: white;
+}
