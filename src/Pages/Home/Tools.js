@@ -13,7 +13,7 @@ const Tools = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="my-20">
+    <div className="my-20 px-10">
       <h2 className="text-4xl text-center font-bold my-5">Too<span className="text-primary">ls</span></h2>
       <div className="container lg:px-28 mx-auto grid grid-cols-1 gap-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         {

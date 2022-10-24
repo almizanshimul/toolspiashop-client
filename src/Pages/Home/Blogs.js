@@ -1,6 +1,6 @@
 import React from "react";
 
-const EndlessTrust = () => {
+const Blogs = () => {
   return (
     <div className="container mx-auto py-20">
       <h2 className="text-center text-5xl font-bold pb-10">Blogs</h2>
@@ -40,4 +40,4 @@ const EndlessTrust = () => {
   );
 };
 
-export default EndlessTrust;
+export default Blogs;
