@@ -6,7 +6,7 @@ const Banner = () => {
       className="bg-no-repeat bg-cover bg-center home-banner flex justify-center items-center bg-[url('https://i.ibb.co/Ybk71qf/background.jpg')]"
     >
       <div className="hero text-white min-h-screen bg-[#0000009c]">
-        <div className="hero-content lg:flex-row-reverse items-center">
+        <div className="hero-content flex-col lg:flex-row-reverse items-center pt-20">
           <img
             data-aos="fade-left"
             data-aos-delay="fade-right"
