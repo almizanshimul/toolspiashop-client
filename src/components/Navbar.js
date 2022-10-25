@@ -29,6 +29,7 @@ const Navbar = () => {
     return;
   }
 
+
   const navItems = (
     <>
       <li>
@@ -45,21 +46,23 @@ const Navbar = () => {
           <NavLink to="/dashboard">Dashboard</NavLink>
         </li>
       )}
-      {user ? (
-        <button
-          onClick={() => {
-            signOut(auth);
-            localStorage.removeItem("accessToken");
-          }}
-          className="btn btn-secondary"
-        >
-          {user.displayName}: Sign Out
-        </button>
-      ) : (
-        <li>
-          <NavLink to="/login">Login</NavLink>
-        </li>
-      )}
+      {
+        user ? (
+          <button
+            onClick={() => {
+              signOut(auth);
+              localStorage.removeItem("accessToken");
+            }}
+            className="btn btn-secondary"
+          >
+            {user.displayName}: Sign Out
+          </button>
+        ) : (
+          <li>
+            <NavLink to="/login">Login</NavLink>
+          </li>
+        )
+      }
     </>
   );
 
@@ -69,7 +72,7 @@ const Navbar = () => {
         } fixed duration-500 top-0 bg-white text-black`}
     >
       <div className="container mx-auto">
-        <div className="navbar-start">
+        <div className="navbar-start flex">
           <div className="dropdown">
             <label tabIndex="0" className="btn btn-ghost lg:hidden">
               <svg
@@ -104,7 +107,7 @@ const Navbar = () => {
         <div className="navbar-end w-full hidden lg:flex">
           <ul className="menu menu-horizontal p-0 gap-5">{navItems}</ul>
         </div>
-        <div className="navbar-end text-right lg:hidden md:hidden">
+        <div className="navbar-end text-right lg:hidden">
           <label
             htmlFor="dashboard-drawer"
             className="btn btn-primary drawer-button lg:hidden"
