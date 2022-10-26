@@ -3,6 +3,10 @@
 **Server Side Link** [https://toolspiashop.herokuapp.com/](https://toolspiashop.herokuapp.com/)  
 **Server Side Code Link** [https://github.com/almizanshimul/toolspiashop-server](https://github.com/almizanshimul/toolspiashop-server) 
 
+### Admin Login
+***
+Email: test@gmail.com
+pass: test@gmail.com
 ## Project Features
 ***
 A list of features used within the project:
