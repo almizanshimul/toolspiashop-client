@@ -7,7 +7,7 @@ import Tool from "./Tool";
 
 const Tools = () => {
   const { data: tools, isLoading } = useQuery("tools", () =>
-    axios.get("https://toolspiashop-server.vercel.app//tools").then(toolsData => toolsData.data)
+    axios.get("https://toolspiashop-server.onrender.com/tools").then(toolsData => toolsData.data)
   );
   if (isLoading) {
     return <Loading></Loading>;

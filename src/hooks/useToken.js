@@ -10,7 +10,7 @@ const useToken = (user) => {
     };
     if (user) {
       axios
-        .put(`https://toolspiashop-server.vercel.app//user/${user?.user?.email}`, currentUser)
+        .put(`https://toolspiashop-server.onrender.com/user/${user?.user?.email}`, currentUser)
         .then((data) => {
           localStorage.setItem("accessToken", data.data.token);
           setToken(data.data.token);

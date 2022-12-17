@@ -39,7 +39,7 @@ const AddProduct = () => {
             availableQuantity: parseInt(data.availableQuantity),
             addedBy: user.email
           };
-          axiosPrivate.post('https://toolspiashop-server.vercel.app//tools', tool)
+          axiosPrivate.post('https://toolspiashop-server.onrender.com/tools', tool)
             .then((data) => {
               if (data.data.acknowledged) {
                 toast.success("Order placed successfully", {

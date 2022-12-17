@@ -6,7 +6,7 @@ const MakeAdminRow = ({ user, index, refetch }) => {
   const { name, email, role } = user;
   const makeUserAdmin = () => {
     axiosPrivate
-      .put(`https://toolspiashop-server.vercel.app//makeAdmin/${email}`, { role: 'admin' })
+      .put(`https://toolspiashop-server.onrender.com/makeAdmin/${email}`, { role: 'admin' })
       .then((res) => {
         if (res.data.acknowledged === true) {
           toast.success("Admin Making Successful", {

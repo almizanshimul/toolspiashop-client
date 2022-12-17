@@ -7,7 +7,7 @@ import MakeAdminRow from "./MakeAdminRow";
 const MakeAdmin = () => {
   const { data: users, isLoading, refetch } = useQuery("users", () => {
     return axiosPrivate
-      .get("https://toolspiashop-server.vercel.app//user")
+      .get("https://toolspiashop-server.onrender.com/user")
       .then((res) => res.data);
   });
   if (isLoading) {

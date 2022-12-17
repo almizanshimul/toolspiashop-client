@@ -5,7 +5,7 @@ import axiosPrivate from "../../api/axiosPrivate";
 const ManageProductsDeleteConfirm = ({ deletingTool, refetch }) => {
   const { name, _id } = deletingTool;
   const handleDelete = () => {
-    axiosPrivate.delete(`https://toolspiashop-server.vercel.app//tools/${_id}`)
+    axiosPrivate.delete(`https://toolspiashop-server.onrender.com/tools/${_id}`)
       .then(res => {
         if (res.data.acknowledged === true) {
           toast.success("Tool deleted successfully", {

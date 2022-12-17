@@ -15,7 +15,7 @@ const CheckoutForm = ({ order }) => {
 
   useEffect(() => {
     axiosPrivate
-      .post("https://toolspiashop-server.vercel.app//create-payment-intent", {
+      .post("https://toolspiashop-server.onrender.com/create-payment-intent", {
         price: price * quantity,
       })
       .then((data) => {
@@ -72,7 +72,7 @@ const CheckoutForm = ({ order }) => {
         transactionId: paymentIntent.id
       };
       axiosPrivate
-        .patch(`https://toolspiashop-server.vercel.app//order/${_id}`, payment)
+        .patch(`https://toolspiashop-server.onrender.com/order/${_id}`, payment)
         .then((data) => {
           setPaymentProcessing(false);
           console.log(data);
