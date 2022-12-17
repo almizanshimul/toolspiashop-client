@@ -15,7 +15,7 @@ const Payment = () => {
   const { id } = useParams();
   const { data: order, isLoading } = useQuery("payment", () =>
     axiosPrivate
-      .get(`https://toolspiashop.herokuapp.com/orderById/${id}`)
+      .get(`https://toolspiashop-server.vercel.app//orderById/${id}`)
       .then((res) => res.data)
   );
   if (isLoading) {

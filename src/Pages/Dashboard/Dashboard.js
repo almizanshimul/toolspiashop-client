@@ -10,7 +10,7 @@ const Dashboard = () => {
   const [user, loading, error] = useAuthState(auth);
   const { data: admin, isLoading } = useQuery("admin", () => {
     return axiosPrivate
-      .get(`https://toolspiashop.herokuapp.com/admin/${user.email}`)
+      .get(`https://toolspiashop-server.vercel.app//admin/${user.email}`)
       .then((res) => res.data.isAdmin);
   });
   if (isLoading) {

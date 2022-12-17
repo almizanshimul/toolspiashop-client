@@ -21,7 +21,7 @@ const Navbar = () => {
 
   useEffect(() => {
     axiosPrivate
-      .get(`https://toolspiashop.herokuapp.com/admin/${user?.email}`)
+      .get(`https://toolspiashop-server.vercel.app//admin/${user?.email}`)
       .then((res) => setAdmin(res.data.isAdmin));
   }, []);
 

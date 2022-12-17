@@ -45,7 +45,7 @@ const Reviews = () => {
   };
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    axios.get("https://toolspiashop.herokuapp.com/reviews").then((res) => {
+    axios.get("https://toolspiashop-server.vercel.app//reviews").then((res) => {
       setReviews(res.data);
     });
   }, []);

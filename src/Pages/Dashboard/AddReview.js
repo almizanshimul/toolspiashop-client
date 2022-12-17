@@ -21,7 +21,7 @@ const AddReview = () => {
       name: displayName,
       ...data,
     };
-    axiosPrivate.post("https://toolspiashop.herokuapp.com/reviews", review).then((res) => {
+    axiosPrivate.post("https://toolspiashop-server.vercel.app//reviews", review).then((res) => {
       if (res.data.acknowledged === true) {
         toast.success("Review Added Successfully", {
           position: "top-right",

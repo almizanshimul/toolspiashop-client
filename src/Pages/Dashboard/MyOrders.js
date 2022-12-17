@@ -14,7 +14,7 @@ const MyOrders = () => {
     refetch,
   } = useQuery("myOrders", () => {
     return axiosPrivate
-      .get(`https://toolspiashop.herokuapp.com/order/${user.email}`)
+      .get(`https://toolspiashop-server.vercel.app//order/${user.email}`)
       .then((res) => res.data);
   });
   if (isLoading) {

@@ -15,7 +15,7 @@ const Purchase = () => {
     data: tool,
     isLoading,
   } = useQuery("tool", () =>
-    axios.get(`https://toolspiashop.herokuapp.com/tools/${id}`).then((res) => res.data)
+    axios.get(`https://toolspiashop-server.vercel.app//tools/${id}`).then((res) => res.data)
   );
   if (isLoading) {
     return <Loading></Loading>;

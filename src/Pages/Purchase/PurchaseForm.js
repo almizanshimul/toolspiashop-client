@@ -30,7 +30,7 @@ const PurchaseForm = ({ user, tool }) => {
       transactionId: '',
       status: 'pending'
     };
-    axiosPrivate.post(`https://toolspiashop.herokuapp.com/order?toolId=${_id}&newQuantity=${availableQuantity - quantity}`, order).then((res) => {
+    axiosPrivate.post(`https://toolspiashop-server.vercel.app//order?toolId=${_id}&newQuantity=${availableQuantity - quantity}`, order).then((res) => {
       if (res.data.acknowledged === true) {
         toast.success("Order placed successfully", {
           position: "top-right",

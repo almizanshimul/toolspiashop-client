@@ -7,7 +7,7 @@ import ManageOrderRow from "./ManageOrderRow";
 const ManageAllOrders = () => {
   const { data: orders, isLoading, refetch } = useQuery("users", () => {
     return axiosPrivate
-      .get("https://toolspiashop.herokuapp.com/order")
+      .get("https://toolspiashop-server.vercel.app//order")
       .then((res) => res.data);
   });
   if (isLoading) {

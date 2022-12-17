@@ -8,13 +8,13 @@ const DeleteConfirmModal = ({ deletingOrder, refetch }) => {
   const [tool, setTool] = useState({});
   useEffect(() => {
     axios
-      .get(`https://toolspiashop.herokuapp.com/tools/${toolId}`)
+      .get(`https://toolspiashop-server.vercel.app//tools/${toolId}`)
       .then((res) => setTool(res.data));
   }, [toolId]);
   const handleDelete = () => {
     axiosPrivate
       .delete(
-        `https://toolspiashop.herokuapp.com/order/${_id}?toolId=${toolId}&newQuantity=${parseInt(tool?.availableQuantity) + parseInt(quantity)
+        `https://toolspiashop-server.vercel.app//order/${_id}?toolId=${toolId}&newQuantity=${parseInt(tool?.availableQuantity) + parseInt(quantity)
         }`
       )
       .then((res) => {

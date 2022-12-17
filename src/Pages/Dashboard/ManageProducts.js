@@ -8,7 +8,7 @@ import ManageProductsRow from "./ManageProductRow";
 const ManageProducts = () => {
   const { data: tools, isLoading, refetch } = useQuery("users", () => {
     return axiosPrivate
-      .get("https://toolspiashop.herokuapp.com/tools")
+      .get("https://toolspiashop-server.vercel.app//tools")
       .then((res) => res.data);
   });
   if (isLoading) {

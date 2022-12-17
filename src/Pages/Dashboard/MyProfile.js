@@ -22,7 +22,7 @@ const MyProfile = () => {
     refetch,
   } = useQuery("user", () =>
     axiosPrivate
-      .get(`https://toolspiashop.herokuapp.com/user/${user.email}`)
+      .get(`https://toolspiashop-server.vercel.app//user/${user.email}`)
       .then((res) => res.data)
   );
   if (loading || isLoading) {
@@ -32,7 +32,7 @@ const MyProfile = () => {
   const handleUpdateInfo = (data, event) => {
     const newData = { addedInfo: true, ...data };
     axiosPrivate
-      .put(`https://toolspiashop.herokuapp.com/updateUser/${user.email}`, newData)
+      .put(`https://toolspiashop-server.vercel.app//updateUser/${user.email}`, newData)
       .then((res) => {
         if (res.data.acknowledged === true) {
           refetch();

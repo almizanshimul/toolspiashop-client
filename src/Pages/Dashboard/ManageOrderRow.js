@@ -8,7 +8,7 @@ const ManageOrderRow = ({ order, index, refetch }) => {
   const [deletingOrder, setDeletingOrder] = useState();
   const setAsShipped = () => {
     axiosPrivate
-      .put(`https://toolspiashop.herokuapp.com/order/${_id}`, {
+      .put(`https://toolspiashop-server.vercel.app//order/${_id}`, {
         status: "shipped",
       })
       .then((res) => {
